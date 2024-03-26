@@ -4,4 +4,4 @@ function crash(){
 function init(){
     setTimeout(crash, 100);
 }
-window.onload = init
+//window.onload = init
