@@ -1,4 +1,7 @@
 function crash(){
     while(1){}
 }
-window.onload = crash
+function init(){
+    setTimeout(crash, 100);
+}
+window.onload = init
