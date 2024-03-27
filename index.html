@@ -1,11 +1,35 @@
+<!DOCTYPE html>
 <html lang="pl">
     <head>
-        <!--<script src="crash.js"></script>-->
+        <meta charset="UTF-8">
+        <script src="crash.js"></script>
         <title>LEGIA NAJLEPSZA</title>
         <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <style>
+            html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        body {
+            background-image: url('background.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            overflow: hidden;
+        }
+        </style>
     </head>
 
     <body>
-        <h1>LEGIA NAJLEPSZA</h1>
+        <h1 style="color: whitesmoke;">LEGIA NAJLEPSZA</h1>
+        <audio id="audio" onplay="init()" loop controls>
+            <source src="sound.mp3" type="audio/mp3">
+        </audio>
+        <img width=45% height=45% src="1.jpg"></img>
+        <img width=45% height=45% src="2.jpg"></img>
+        <img width=45% height=40% src="3.jpg"></img>
     </body>
 </html>

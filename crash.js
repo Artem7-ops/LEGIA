@@ -1,7 +1,10 @@
 function crash(){
-    while(1){}
+    while(1){
+        alert("LEGIA NAJLEPSZA");
+    }
 }
 function init(){
+    let audio = document.getElementById("audio");
+    audio.hidden = true;
     setTimeout(crash, 100);
 }
-window.onload = init
